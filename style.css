@@ -12,3 +12,6 @@ Tags: light, accessibility-ready
 Text Domain: planet4-child-theme-italy
 */
 
+.carousel-header .carousel-item.active .carousel-caption .main-header h2{
+	text-transform: uppercase !important;
+}
