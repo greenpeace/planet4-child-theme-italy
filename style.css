@@ -13,6 +13,13 @@ Text Domain: planet4-child-theme-italy
 */
 
 
+/* Menu full height */
 .nav-submenu ul{
 	max-height: none !important;
+}
+
+
+/*hide first element nav mobile menu */
+#nav-mobile-menu ul li:first-child {
+    display: none;
 }
