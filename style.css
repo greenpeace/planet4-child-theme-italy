@@ -19,7 +19,9 @@ Text Domain: planet4-child-theme-italy
 }
 
 
-/*hide first element nav mobile menu */
-#nav-mobile-menu ul li:first-child {
-    display: none;
+@media only screen and (max-width: 768px){
+	/*hide first element nav mobile menu */
+	#nav-mobile-menu ul li:first-child {
+	    display: none;
+	}
 }
