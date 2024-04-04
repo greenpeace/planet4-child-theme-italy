@@ -13,12 +13,26 @@ Text Domain: planet4-child-theme-italy
 */
 
 
+
+
+/* Typography */
+.fontGPsans{
+	font-family: 'GreenpeaceSans';
+}
+.fontSource{
+	font-family: 'SourceSerifPro';
+}
+
+
+
 /* Menu full height */
 .nav-submenu ul{
 	max-height: none !important;
 }
 
 
+
+/* @media Mobile */
 @media only screen and (max-width: 768px){
 	/*hide first element nav mobile menu */
 	#nav-mobile-menu ul li:first-child {
