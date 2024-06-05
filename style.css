@@ -32,6 +32,13 @@ Text Domain: planet4-child-theme-italy
 
 
 
+/* Other */
+.hide-block{
+	display: none;
+}
+
+
+
 /* @media Mobile */
 @media only screen and (max-width: 768px){
 	/*hide first element nav mobile menu */
