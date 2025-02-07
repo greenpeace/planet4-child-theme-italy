@@ -23,3 +23,9 @@ function enqueue_child_styles() {
 }
 
 
+function avatar_default($avatar_defaults) {
+    $nuovo_avatar = 'img/user-avatar-default.png';
+    $avatar_defaults[$nuovo_avatar] = "Avatar Personalizzato";
+    return $avatar_defaults;
+}
+add_filter('avatar_defaults', 'avatar_default');
