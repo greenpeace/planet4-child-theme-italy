@@ -23,9 +23,10 @@ function enqueue_child_styles() {
 }
 
 
-function avatar_default($avatar_defaults) {
-    $nuovo_avatar = 'img/user-avatar-default.png';
-    $avatar_defaults[$nuovo_avatar] = "Avatar Personalizzato";
+function mio_avatar_default($avatar_defaults) {
+    $nuovo_avatar = get_stylesheet_directory_uri() . '/img/user-avatar-default.png';
+    $avatar_defaults[$nuovo_avatar] = "Avatar Greenpeace";
     return $avatar_defaults;
 }
-add_filter('avatar_defaults', 'avatar_default');
+add_filter('avatar_defaults', 'mio_avatar_default');
+
