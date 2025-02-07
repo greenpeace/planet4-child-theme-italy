@@ -23,10 +23,24 @@ function enqueue_child_styles() {
 }
 
 
-function mio_avatar_default($avatar_defaults) {
-    $nuovo_avatar = get_stylesheet_directory_uri() . '/img/user-avatar-default.png';
-    $avatar_defaults[$nuovo_avatar] = "Avatar Greenpeace";
-    return $avatar_defaults;
-}
-add_filter('avatar_defaults', 'mio_avatar_default');
+// function avatar_default($avatar_defaults) {
+//     $nuovo_avatar = get_stylesheet_directory_uri() . '/img/user-avatar-default.png';
+//     $avatar_defaults[$nuovo_avatar] = "Avatar Greenpeace";
+//     return $avatar_defaults;
+// }
+// add_filter('avatar_defaults', 'avatar_default');
 
+
+
+function override_default_avatar( $args, $id_or_email ) {
+    // Qui controlli se il parametro 'default' è uguale a quello impostato dal tema
+    $tema_default = get_template_directory_uri() . '/images/p4-avatar.jpg';
+
+    if ( isset( $args['default'] ) && $args['default'] === $tema_default ) {
+        // Sostituisci con il tuo avatar personalizzato
+        $args['default'] = get_stylesheet_directory_uri() . '/img/user-avatar-default.png';
+    }
+    
+    return $args;
+}
+add_filter( 'pre_get_avatar_data', 'override_default_avatar', 10, 2 );
